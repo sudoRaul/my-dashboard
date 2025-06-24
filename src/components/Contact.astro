@@ -1,0 +1,31 @@
+---
+---
+
+<section id="contact" class="py-20 max-w-3xl mx-auto px-4">
+  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Contact</h2>
+
+  <form action="https://formspree.io/f/mkgbqzkw" method="POST" class="space-y-6">
+  <div>
+    <label for="name" class="block text-gray-300 mb-2">Name</label>
+    <input type="text" id="name" name="name" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-cyan-400" />
+  </div>
+
+  <div>
+    <label for="email" class="block text-gray-300 mb-2">Email</label>
+    <input type="email" id="email" name="email" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-cyan-400" />
+  </div>
+
+  <div>
+    <label for="message" class="block text-gray-300 mb-2">Message</label>
+    <textarea id="message" name="message" rows="5" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-cyan-400"></textarea>
+  </div>
+
+  <!-- Google reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LdZ22orAAAAAEr-cgIc_8dtItaq25hzZCi-p8ag"></div>
+
+  <button type="submit" class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded transition">Send Message</button>
+</form>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</section>

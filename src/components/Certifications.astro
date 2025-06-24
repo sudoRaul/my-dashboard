@@ -1,0 +1,90 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
+---
+
+<section id="certifications" class="py-20 max-w-5xl mx-auto px-4">
+  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Certifications</h2>
+
+  <swiper-container
+    navigation="true"
+    space-between="30"
+    slides-per-view="1"
+    loop="true"
+    effect="coverflow"
+    centered-slides="true"
+    coverflow-effect='{"rotate":0,"stretch":0,"depth":100,"modifier":2,"slideShadows":true}'
+    class="pb-8 w-full"
+    style="max-width: 1000px; margin: 0 auto;"
+    breakpoints='{"640": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'
+  >
+    <!-- Certificación 1 -->
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 1" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">Frontend Developer</h3>
+      <p class="text-gray-400 mb-1">Google</p>
+      <p class="text-gray-500 text-sm">2024</p>
+    </swiper-slide>
+
+    <!-- Certificación 2 -->
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 2" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">Responsive Web Design</h3>
+      <p class="text-gray-400 mb-1">freeCodeCamp</p>
+      <p class="text-gray-500 text-sm">2023</p>
+    </swiper-slide>
+
+    <!-- Certificación 3 -->
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
+      <p class="text-gray-400 mb-1">freeCodeCamp</p>
+      <p class="text-gray-500 text-sm">2023</p>
+    </swiper-slide>
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
+      <p class="text-gray-400 mb-1">freeCodeCamp</p>
+      <p class="text-gray-500 text-sm">2023</p>
+    </swiper-slide>
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
+      <p class="text-gray-400 mb-1">freeCodeCamp</p>
+      <p class="text-gray-500 text-sm">2023</p>
+    </swiper-slide>
+    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
+      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
+      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
+      <p class="text-gray-400 mb-1">freeCodeCamp</p>
+      <p class="text-gray-500 text-sm">2023</p>
+    </swiper-slide>
+    <!-- Puedes añadir más slides aquí -->
+  </swiper-container>
+</section>
+
+<script>
+  import { register } from 'swiper/element/bundle';
+  register();
+</script>
+
+<style>
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+swiper-slide.swiper-slide-active {
+  transform: scale(1.08);
+  box-shadow: 0 0 32px 0 rgba(0,255,255,0.25), 0 8px 32px 0 rgba(0,0,0,0.25);
+  z-index: 2;
+}
+</style>
