@@ -27,7 +27,7 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+<section id="projects" class="py-20 max-w-6xl mx-auto px-4 fade-in-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
   <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Projects</h2>
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -57,3 +57,17 @@ const projects = [
     ))}
   </div>
 </section>
+
+<script >
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>

@@ -1,11 +1,19 @@
 ---
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 ---
 
-<section id="certifications" class="py-20 max-w-5xl mx-auto px-4">
-  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Certifications</h2>
+<section
+  id="certifications"
+  class="py-20 max-w-5xl mx-auto px-4 fade-in-section"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-delay="300"
+>
+  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">
+    Certifications
+  </h2>
 
   <swiper-container
     navigation="true"
@@ -20,71 +28,141 @@ import 'swiper/css/effect-coverflow';
     breakpoints='{"640": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'
   >
     <!-- Certificación 1 -->
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 1" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">Frontend Developer</h3>
-      <p class="text-gray-400 mb-1">Google</p>
-      <p class="text-gray-500 text-sm">2024</p>
+    <swiper-slide
+      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] mx-auto"
+    >
+      <img
+        src="src/assets/certifications/django.svg"
+        alt="Certificación Django"
+        class="w-32 h-32 object-contain mb-6"
+      />
+      <h3 class="text-2xl font-bold text-cyan-400 mb-1">Django</h3>
+      <span class="text-sm text-gray-400 mb-2">OpenWebinars &bull; 2025</span>
+      <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+      
+      <ul class="text-gray-300 text-base leading-relaxed mb-2">
+        <li>Create API REST</li>
+        <li>Protect routes with JWT</li>
+        <li>Organize the code</li>
+      </ul>
     </swiper-slide>
 
     <!-- Certificación 2 -->
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 2" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">Responsive Web Design</h3>
-      <p class="text-gray-400 mb-1">freeCodeCamp</p>
-      <p class="text-gray-500 text-sm">2023</p>
+    <swiper-slide
+      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] max-w-[380px] mx-auto"
+    >
+      <img
+        src="src/assets/certifications/spring-boot.svg"
+        alt="Certificación 2"
+        class="w-32 h-32 object-contain mb-6"
+      />
+      <h3 class="text-2xl font-bold text-cyan-400 mb-1">
+        SpringBoot
+      </h3>
+      <span class="text-sm text-gray-400 mb-2">OpenWebinars &bull; 2025</span>
+      <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+      <p class="text-gray-300 text-base leading-relaxed mb-2">
+        Creating API REST using Spring Data JPA and Spring Security.
+      </p>
     </swiper-slide>
 
     <!-- Certificación 3 -->
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
-      <p class="text-gray-400 mb-1">freeCodeCamp</p>
-      <p class="text-gray-500 text-sm">2023</p>
+    <swiper-slide
+      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] max-w-[380px] mx-auto"
+    >
+      <img
+        src="src/assets/certifications/mysql.svg"
+        alt="Certificación 3"
+        class="w-32 h-32 object-contain mb-6"
+      />
+      <h3 class="text-2xl font-bold text-cyan-400 mb-1">
+        SQL
+      </h3>
+      <span class="text-sm text-gray-400 mb-2">DataLearn &bull; Jun 2025</span>
+      <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+    
+      <ul class="text-gray-300 text-base leading-relaxed mb-2">
+        <li>Aggregate Functions</li>
+        <li>Group By</li>
+        <li>Joins</li>
+        <li>CTE and Subquery</li>
+        <li>Window Function</li>
+      </ul>
     </swiper-slide>
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
-      <p class="text-gray-400 mb-1">freeCodeCamp</p>
-      <p class="text-gray-500 text-sm">2023</p>
+    <swiper-slide
+      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] max-w-[380px] mx-auto"
+    >
+      <img
+        src="src/assets/certifications/docker.svg"
+        alt="Certificación 3"
+        class="w-32 h-32 object-contain mb-6"
+      />
+      <h3 class="text-2xl font-bold text-cyan-400 mb-1">
+        Docker
+      </h3>
+      <span class="text-sm text-gray-400 mb-2">OpenWebinars &bull; 2024</span>
+      <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+      
+      <ul class="text-gray-300 text-base leading-relaxed mb-2">
+        <li>Running Containers</li>
+        <li>Volumes and BindParam</li>
+        <li>Nets in Docker</li>
+        <li>docker-compose file</li>
+        <li>Creating Images</li>
+      </ul>
     </swiper-slide>
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
-      <p class="text-gray-400 mb-1">freeCodeCamp</p>
-      <p class="text-gray-500 text-sm">2023</p>
+    <swiper-slide
+      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] max-w-[380px] mx-auto"
+    >
+      <img
+        src="src/assets/certifications/angular.svg"
+        alt="Certificación 3"
+        class="w-32 h-32 object-contain mb-6"
+      />
+      <h3 class="text-2xl font-bold text-cyan-400 mb-1">
+        Angular
+      </h3>
+      <span class="text-sm text-gray-400 mb-2">Udemy &bull; 2025</span>
+      <div class="w-12 h-1 bg-cyan-400 rounded-full mb-4"></div>
+      
+      <ul class="text-gray-300 text-base leading-relaxed mb-2">
+        <li>Angular Environmet</li>
+        <li>Path Alias</li>
+        <li>Input/Output</li>
+        <li>Signals</li>
+        <li>Fetching Data from API</li>
+      </ul>
     </swiper-slide>
-    <swiper-slide class="bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
-      <img src="https://i.pinimg.com/736x/d3/b2/7f/d3b27fa12610035fe77bfb218e062d14.jpg" alt="Certificación 3" class="w-24 h-24 object-contain mb-4" />
-      <h3 class="text-xl font-semibold text-white mb-2">JavaScript Algorithms</h3>
-      <p class="text-gray-400 mb-1">freeCodeCamp</p>
-      <p class="text-gray-500 text-sm">2023</p>
-    </swiper-slide>
-    <!-- Puedes añadir más slides aquí -->
+    
   </swiper-container>
 </section>
 
 <script>
-  import { register } from 'swiper/element/bundle';
+  import { register } from "swiper/element/bundle";
   register();
 </script>
 
 <style>
-swiper-container {
-  width: 100%;
-  height: 100%;
-}
-swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-swiper-slide.swiper-slide-active {
-  transform: scale(1.08);
-  box-shadow: 0 0 32px 0 rgba(0,255,255,0.25), 0 8px 32px 0 rgba(0,0,0,0.25);
-  z-index: 2;
-}
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+  }
+  swiper-slide.swiper-slide-active {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 32px 0 rgba(0, 255, 255, 0.25),
+      0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
 </style>

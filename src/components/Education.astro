@@ -1,12 +1,13 @@
 ---
 ---
-
 <section id="education" class="py-20 max-w-4xl mx-auto px-4">
-  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400">Education</h2>
+  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400 fade-in-section">
+    Education
+  </h2>
 
   <div class="relative border-l-2 border-cyan-400 pl-6 space-y-12">
     <!-- Educación 1 -->
-    <div class="relative">
+    <div class="relative fade-in-section" data-delay="0">
       <div class="absolute -left-6 w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-950"></div>
       <span class="text-gray-400 text-sm">2024 - Actualidad</span>
       <h3 class="text-2xl font-semibold text-white">Curso de Desarrollo Web</h3>
@@ -16,7 +17,7 @@
     </div>
 
     <!-- Educación 2 -->
-    <div class="relative">
+    <div class="relative fade-in-section" data-delay="200">
       <div class="absolute -left-6 w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-950"></div>
       <span class="text-gray-400 text-sm">2022 - 2024</span>
       <h3 class="text-2xl font-semibold text-white">Técnico Superior en Desarrollo de Aplicaciones Web</h3>
@@ -26,7 +27,7 @@
     </div>
 
     <!-- Educación 3 -->
-    <div class="relative">
+    <div class="relative fade-in-section" data-delay="400">
       <div class="absolute -left-6 w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-950"></div>
       <span class="text-gray-400 text-sm">2016 - 2022</span>
       <h3 class="text-2xl font-semibold text-white">Educación Secundaria y Bachillerato</h3>
@@ -36,3 +37,18 @@
     </div>
   </div>
 </section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+</script>

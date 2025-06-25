@@ -1,11 +1,39 @@
 ---
+// No necesitas importar nada aquí
 ---
+<section id="about" class="py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-10 fade-in">
+      About Me
+    </h2>
 
-<section id="about" class="flex flex-col items-center justify-center text-center py-20 max-w-4xl mx-auto px-4">
-  <h2 class="text-4xl font-bold mb-6 text-cyan-400">About Me</h2>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Soy un desarrollador web apasionado por crear experiencias digitales atractivas y accesibles. 
-    Actualmente estoy enfocado en mejorar mis habilidades en Astro, Tailwind y tecnologías modernas de frontend. 
-    Me encanta construir sitios rápidos, visualmente agradables y fáciles de usar.
-  </p>
+    <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-12">
+      <div class="md:w-1/2 fade-in">
+        <img src="/tu-foto-cartoon.png" alt="Profile" class="rounded-2xl shadow-lg" />
+      </div>
+
+      <div class="md:w-1/2 text-gray-300 space-y-4 fade-in">
+        <p>
+          I'm a passionate programmer focused on web development, constantly learning new technologies and improving my skills.
+        </p>
+        <p>
+          I enjoy creating user-friendly websites and continuously seek new challenges to grow professionally.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script >
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
