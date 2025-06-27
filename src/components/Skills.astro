@@ -78,23 +78,7 @@
   </div>
 </section>
 
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-    }
-  );
-
-  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-</script>
-
+<script type="module" src="/src/assets/fade-in.js"></script>
 <style>
 .shadow-cyan-glow {
   text-shadow: 0 0 12px #06b6d4, 0 0 24px #06b6d4;

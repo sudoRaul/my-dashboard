@@ -1,8 +1,8 @@
----
----
-
 <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
-  <img src="src/assets/myPhotos/logo.png" class="w-24 rounded-3xl" />
+  <div class="flex items-center gap-4">
+    <img src="src/assets/myPhotos/logoSVG.png" class="w-24 rounded-3xl" alt="Logo" />
+    <span class="navbar-name shadow-purple-glow">&lt;Raúl Rodríguez&gt;</span>
+  </div>
   <ul class="flex space-x-8 text-lg">
     <li><a href="#about" class="nav-link">About</a></li>
     <li><a href="#education" class="nav-link">Education</a></li>
@@ -14,6 +14,24 @@
 </nav>
 
 <style>
+.navbar-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  background: linear-gradient(100deg, #00d5fa, #b489f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s;
+  
+  text-shadow:
+    0 0 8px #a78bfa,
+    0 0 16px #a78bfa,
+    0 0 24px #a78bfa;
+}
+
 .nav-link {
   @apply px-4 py-2 rounded-lg transition-all duration-1000 font-medium text-white;
   background: transparent;
@@ -26,3 +44,6 @@
   outline: none;
 }
 </style>
+
+<!-- Google Fonts para Cormorant Garamond -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
