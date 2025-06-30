@@ -1,29 +1,104 @@
 ---
+
 ---
-<section id="education" class="py-20 max-w-4xl mx-auto px-4">
-  <h2 class="text-4xl font-bold mb-12 text-center text-cyan-400 fade-in-section">
+
+<section id="education" class="py-20 max-w-6xl mx-auto px-4">
+  <h2
+    class="text-4xl font-bold mb-12 text-center text-cyan-400 fade-in-section"
+  >
     Education
   </h2>
 
-  <div class="relative border-l-2 border-cyan-400 pl-6 space-y-12">
-    
-    <div class="relative fade-in-section" data-delay="200">
-      <div class="absolute -left-6 w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-950"></div>
-      <span class="text-gray-400 text-sm">2023 - 2025</span>
-      <h3 class="text-2xl font-semibold text-white">Técnico Superior en Desarrollo de Aplicaciones Web</h3>
-      <p class="text-gray-300 mt-2">
-        Ciclo formativo donde aprendí a programar aplicaciones web completas, incluyendo bases de datos y servidores.
-      </p>
+  <!-- Línea vertical y escudos -->
+  <div class="relative grid grid-cols-3 gap-4 items-center">
+    <!-- Bloque izquierdo -->
+    <div class="col-span-1 flex justify-end">
+      <div
+        class="bg-indigo-900/50 text-white rounded-lg p-6 w-full max-w-md animate-zoomIn"
+      >
+        <span class="text-gray-300 text-sm block mb-2">2023 - 2025</span>
+        <h3 class="text-xl font-semibold">
+          Higher Technician in Web Application Development
+        </h3>
+        <p class="mt-2 text-sm font-bold uppercase px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white shadow-md center-pill">
+          I.E.S Virgen del Carmen, Jaén
+        </p>
+      </div>
     </div>
 
-    
-    <div class="relative fade-in-section" data-delay="400">
-      <div class="absolute -left-6 w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-950"></div>
-      <span class="text-gray-400 text-sm">2017 - 2023</span>
-      <h3 class="text-2xl font-semibold text-white">Educación Secundaria y Bachillerato</h3>
-      <p class="text-gray-300 mt-2">
-        Formación general con enfoque en tecnología, matemáticas e informática.
-      </p>
+    <!-- Escudo centro -->
+    <div class="col-span-1 flex flex-col items-center">
+      <!-- Línea central -->
+      <div
+        class="w-1 bg-white h-full absolute top-0 left-1/2 transform -translate-x-1/2 z-0"
+      >
+      </div>
+
+      <!-- Escudo -->
+      <div
+        class="col-span-1 flex justify-center items-center animate-zoomIn"
+        style="animation-delay: 0.2s;"
+      >
+        <div
+          class="w-20 h-20 bg-white rounded-full border-4 border-gray-950 flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src="src/multimedia/icons/virgenCarmen.jpeg"
+            alt="IES Virgen del Carmen"
+            class="w-18 h-18 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Vacío para mantener la estructura -->
+    <div class="col-span-1"></div>
+
+    <!-- Vacío para mantener la estructura -->
+    <div class="col-span-1"></div>
+
+    <!-- Escudo centro -->
+    <div
+      class="col-span-1 flex justify-center items-center animate-zoomIn"
+      style="animation-delay: 0.2s;"
+    >
+      <div
+        class="w-20 h-20 bg-white rounded-full border-4 border-gray-950 flex items-center justify-center overflow-hidden"
+      >
+        <img
+          src="src/multimedia/icons/sierraSegura.jpg"
+          alt="IES Logo 1"
+          class="w-20 h-20 object-contain"
+        />
+      </div>
+    </div>
+
+    <!-- Bloque derecho -->
+    <div class="col-span-1 flex justify-start mt-12">
+      <div
+        class="bg-indigo-900/50 text-white rounded-lg p-6 w-full max-w-md animate-zoomIn"
+        style="animation-delay: 0.2s;"
+      >
+        <span class="text-gray-300 text-sm block mb-2">2017 - 2023</span>
+        <h3 class="text-xl font-semibold">
+          Secondary and Pre-University Education
+        </h3>
+        <p class="mt-2 text-sm font-bold uppercase px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white shadow-md center-pill">
+          I.E.S Sierra de Segura
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+.center-pill {
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px 0 rgba(80, 0, 120, 0.15);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  transition: transform 0.2s;
+}
+.center-pill:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+</style>
