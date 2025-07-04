@@ -9,7 +9,6 @@ const projects = [
     description: "Management application for a driving school with login system, user roles, exams, and more.",
     image: autoescuelaImg, // Usar la variable importada
     technologies: ["JavaScript", "CSS", "HTML"],
-    live: "https://autoescuelajs.netlify.app/",
     code: "https://github.com/sudoRaul/ProyectoAutoEscuelaJavaScript"
   },
   {
@@ -51,9 +50,6 @@ const projects = [
             ))}
           </div>
           <div class="flex gap-3">
-            {project.live && (
-              <a href={project.live} target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded shadow transition">Live</a>
-            )}
             {project.code && (
               <a href={project.code} target="_blank" class="text-sm bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded shadow transition">Code</a>
             )}

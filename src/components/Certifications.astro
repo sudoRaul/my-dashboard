@@ -21,20 +21,21 @@ import AngularIcon from '../multimedia/certifications/angular.svg';
   </h2>
 
   <swiper-container
-    navigation="true"
-    space-between="30"
-    slides-per-view="1"
-    loop="true"
-    effect="coverflow"
-    centered-slides="true"
-    coverflow-effect='{"rotate":0,"stretch":0,"depth":100,"modifier":2,"slideShadows":true}'
-    class="pb-8 w-full"
-    style="max-width: 1000px; margin: 0 auto;"
-    breakpoints='{"640": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'
-  >
+  navigation="true"
+  space-between="30"
+  slides-per-view="1"
+  loop="true"
+  effect="coverflow"
+  centered-slides="true"
+  coverflow-effect='{"rotate":0,"stretch":0,"depth":100,"modifier":2,"slideShadows":true}'
+  class="pb-8 w-full overflow-hidden px-2"
+  style="max-width: 1000px; margin: 0 auto;"
+  breakpoints='{"640": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'
+>
+
     <!-- Certificación 1 -->
     <swiper-slide
-      class="bg-gray-900 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[480px] min-w-[310px] mx-auto"
+      class="bg-gray-900 p-6 sm:p-10 rounded-2xl shadow-lg flex flex-col items-center text-center h-full min-h-[460px] w-full max-w-[320px] sm:min-w-[310px] sm:max-w-[380px] mx-auto"
     >
       <DjangoIcon class="w-32 h-32 object-contain mb-6" />
 
@@ -138,20 +139,19 @@ import AngularIcon from '../multimedia/certifications/angular.svg';
   }
 
   swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    transition:
-      transform 0.3s,
-      box-shadow 0.3s;
-  }
-  swiper-slide.swiper-slide-active {
-    transform: scale(1.05);
-    box-shadow:
-      0 0 32px 0 rgba(0, 255, 255, 0.25),
-      0 8px 32px 0 rgba(0, 0, 0, 0.25);
-    z-index: 2;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 auto;
+}
+
+swiper-slide.swiper-slide-active {
+  transform: scale(1.05);
+  box-shadow: 0 0 32px 0 rgba(0, 255, 255, 0.25),
+              0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
 </style>
