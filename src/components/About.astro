@@ -7,9 +7,9 @@ import myPhoto from '../multimedia/myPhotos/brazosCruzados.jpg';
   <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
     <!-- Imagen y botones a la izquierda -->
     <div class="md:w-1/3 w-full flex flex-col items-center mb-8 md:mb-0">
-      <img src={myPhoto.src} alt="Raúl Rodríguez" class="rounded-2xl shadow-lg object-cover mb-6 w-56 h-80" />
+      <img src={myPhoto.src} alt="Raúl Rodríguez" class="w-full max-w-xs aspect-[9/13] object-cover rounded-2xl shadow-lg mb-6" />
       <div class="flex flex-row gap-3 w-full max-w-xs mb-3">
-        <a href="/cv.pdf" download class="cv-btn flex-1">Descargar CV</a>
+        <a href="/cv.pdf" aria-label="Download CV" download class="cv-btn flex-1">Download CV</a>
         <a href="https://www.linkedin.com/in/ra%C3%BAl-rodr%C3%ADguez-fern%C3%A1ndez-393b05339/" target="_blank" rel="noopener" class="linkedin-btn flex-1">LinkedIn</a>
       </div>
       <a href="https://github.com/sudoRaul" target="_blank" rel="noopener" class="github-btn">GitHub</a>
@@ -71,7 +71,7 @@ import myPhoto from '../multimedia/myPhotos/brazosCruzados.jpg';
 }
 @keyframes typing {
   from { width: 0 }
-  to { width: 72% }
+  to { width: 73% }
 }
 @keyframes blink-caret {
   from, to { border-color: transparent }
