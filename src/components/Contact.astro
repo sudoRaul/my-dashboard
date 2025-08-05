@@ -66,6 +66,7 @@ import messageIcon from '../multimedia/icons/message.png';
             class="w-5 h-5 mt-1 mr-3 opacity-70"
           />
           <textarea
+
             id="message"
             name="message"
             rows="5"
@@ -89,11 +90,46 @@ import messageIcon from '../multimedia/icons/message.png';
       >
         Send Message
       </button>
+      <div id="form-success" class="hidden text-green-400 text-center mt-4">¡Mensaje enviado correctamente!</div>
     </form>
   </div>
 
-  <!-- ✅ reCAPTCHA script -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</section>
+
+<!-- ✅ reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form[action^="https://formspree.io"]');
+    const successMsg = document.getElementById('form-success');
+    if (form instanceof HTMLFormElement && successMsg) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const action = form.getAttribute('action');
+        if (!action) return;
+        const response = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          form.reset();
+          if (typeof window !== 'undefined' && typeof window.grecaptcha !== 'undefined' && window.grecaptcha.reset) window.grecaptcha.reset();
+          successMsg.classList.remove('hidden');
+          successMsg.textContent = '¡Mensaje enviado correctamente!';
+          successMsg.classList.remove('text-red-400');
+          setTimeout(() => successMsg.classList.add('hidden'), 4000);
+        } else {
+          successMsg.textContent = 'Hubo un error al enviar el mensaje.';
+          successMsg.classList.remove('hidden');
+          successMsg.classList.add('text-red-400');
+          setTimeout(() => successMsg.classList.add('hidden'), 4000);
+        }
+      });
+    }
+  });
+</script>
 </section>
 
 
